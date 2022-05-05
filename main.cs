@@ -9,23 +9,31 @@ class Program
 {
     public static void Main(string[] args)
     {
+        int userAge;
 
-   int age;
+      Console.WriteLine("This program identifies which rated movies the user can watch alone.")
+      Console.WriteLine("");
+      Console.Write("Enter Age: ");
+      userAge = Convert.ToInt32(Console.ReadLine());
 
-   Console.WriteLine("This program determines which rated movies they are allowed to watch alone.");
-   Console.WriteLine("");
-   Console.WriteLine("Enter age: ");
-   age = Convert.ToInt32(Console.ReadLine());
-
-   if (age >= 17)
-    Console.WriteLine("You are allowed to watch an R-rated movie alone.");
-   else if (age >= 13)
-     Console.WriteLine("You are allowed to watch a PG-13 rated movie alone.");
-   else if (age >= 5)
-     Console.WriteLine("You are allowed to watch a G-rated movie alone.");
-   else 
-     Console.WriteLine("You are too young to watch movies alone.");
-
-   Console.WriteLine("/nDone.");
-  }
+        Console.WriteLine("Write your age:");
+        userAge = int.Parse(Console.ReadLine());
+        if (userAge > 17)
+        {
+            Console.WriteLine("You are allowed to watch R rated movies alone.");
+        }
+        else if (userAge > 12)
+        {
+            Console.WriteLine("You are allowed to watch PG 13 rated movies alone.");
+        }
+        else if (userAge > 4)
+        {
+            Console.WriteLine("You are allowed to watch G and PG rated movies alone.");
+        }
+        else
+        {
+            Console.WriteLine("You are too young to watch any rated movies alone.");
+        }
+        Console.WriteLine("Done.");
+    }
 }
